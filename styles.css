@@ -42,6 +42,7 @@ section .total {
 }
 section .data {
   display: grid;
+  gap: 12px;
   grid-template-columns: repeat(3, 1fr);
 }
 section .data .sub-data {
