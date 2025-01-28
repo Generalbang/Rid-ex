@@ -1,0 +1,116 @@
+body {
+  text-transform: capitalize;
+}
+ul {
+  display: grid;
+  padding-left: 10px;
+  gap: 10px;
+}
+li {
+  list-style: none;
+}
+h2,
+h5 {
+  margin: 2px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.nav {
+}
+.content {
+  background-color: rgba(211, 211, 211, 0.527);
+}
+.content header {
+  height: 35px;
+  background-color: aliceblue;
+  padding: 0 15px;
+}
+section {
+  padding: 20px;
+  display: grid;
+  gap: 1rem;
+}
+section .total {
+  background-color: rgb(209, 81, 7);
+  width: 150px;
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
+}
+section .data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+section .data .sub-data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: aliceblue;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+}
+section .all-user,
+.users,
+.message,
+.messaging {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+section .messaging {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.users div {
+  text-transform: lowercase;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.users div:first-child {
+  text-transform: capitalize;
+}
+.message {
+  /* min-height: 400px; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  /* padding: 1rem; */
+}
+.message .select {
+  width: 100%;
+}
+select {
+  height: 25px;
+  padding: 2px;
+}
+
+@media screen and (max-width: 760px) {
+  /* html {
+    background-color: aqua;
+  } */
+  main {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    display: none;
+  }
+  section .data {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    /* gap: 2rem; */
+  }
+  section .users {
+    overflow-x: scroll;
+  }
+  section .users span {
+    margin-left: 1rem;
+  }
+  .message {
+    grid-template-columns: 1fr;
+  }
+}
